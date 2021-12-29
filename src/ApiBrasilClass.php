@@ -1,5 +1,7 @@
 <?php
-use Base;
+namespace ApiGratis;
+
+use ApiGratis\Base;
 
 class ApiBrasil extends Base
 {
@@ -8,8 +10,6 @@ class ApiBrasil extends Base
     {
         echo 'Bem vindo ao APIBrasil.';
     }
-
-
 
 
 }
