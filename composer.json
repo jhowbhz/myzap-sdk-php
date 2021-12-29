@@ -1,13 +1,30 @@
 {
     "name": "jhowbhz/package-apigratis",
     "description": "Uma simples de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
+    "keywords":    ["apigratis", "whatsapp", "messages", "api", "myzap", "messages free", "php requests"],
+    "homepage":    "https://apigratis.com.br",
+    "authors": [
+        {
+            "name":     "Jhon",
+            "email":    "contato@apigratis.com.br",
+            "homepage": "https://apigratis.com.br",
+            "role":     "Developer"
+        }
+    ],
+    "type":    "library",
+    "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "another-vendor/package": "1.*"
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.0",
+        "php": ">=7.4"
     },
     "autoload": {
         "psr-4": {
-            "ErikFig\\": "src"
-        }
+            "ApiBrasil\\": "src/"
+        },
+        "files": ["helpers.php"]
     }
 }
