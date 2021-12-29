@@ -25,6 +25,11 @@
     },
     "autoload": {
         "psr-4": { "ApiBrasil\\": "src/" },
-        "files": ["helpers.php"]
+    },
+    "suggest": {
+        "ext-curl": "Required by ApiBrasil\\ to requests in services."
+    },
+    "config": {
+        "sort-packages": true
     }
 }
