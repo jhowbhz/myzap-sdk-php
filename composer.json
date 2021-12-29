@@ -1,0 +1,15 @@
+{
+    "name": "erikfig/pacotes-composer",
+    "authors": [
+        {
+            "name": "Erik Figueiredo",
+            "email": "erik.figueiredo@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ErikFig\\": "src"
+        }
+    }
+}
