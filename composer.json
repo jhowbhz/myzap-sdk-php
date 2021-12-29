@@ -24,7 +24,7 @@
         "php": ">=7.4"
     },
     "autoload": {
-        "psr-4": { "ApiBrasil\\ApiBrasil\\": "src/" },
+        "psr-4": { "ApiBrasil\\": "src/" },
         "files": ["helpers.php"]
     }
 }
