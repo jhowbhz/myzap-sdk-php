@@ -1,12 +1,10 @@
 {
-    "name": "erikfig/pacotes-composer",
-    "authors": [
-        {
-            "name": "Erik Figueiredo",
-            "email": "erik.figueiredo@gmail.com"
-        }
-    ],
-    "require": {},
+    "name": "jhowbhz/package-apigratis",
+    "description": "Uma simples de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
+    "require": {
+        "php": ">=7.4",
+        "another-vendor/package": "1.*"
+    },
     "autoload": {
         "psr-4": {
             "ErikFig\\": "src"
