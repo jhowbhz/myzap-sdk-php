@@ -50,7 +50,7 @@ $data = [
   "session" => "YOUR_SESSION_NAME", //required
   "session_key" => "YOUR_SESSION_KEY", //required
   "number" => "+55995360492", //required
-  "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR" //required
+  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR" //required
 ];
 
 ApiGratis::WhatsAppService("sendText", $data);
