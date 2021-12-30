@@ -1,7 +1,7 @@
 {
     "name": "jhowbhz/package-apigratis",
     "description": "Uma forma simples de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
-    "keywords":    ["apigratis", "whatsapp", "messages", "api", "myzap", "messages free", "php requests"],
+    "keywords":    ["apigratis", "apibrasil", "whatsapp chat", "messages whatsapp", "send whatsapp", "myzap", "send whatsapp messages free", "php requests"],
     "homepage":    "https://apigratis.com.br",
     "authors": [
         {
