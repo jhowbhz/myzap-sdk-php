@@ -1,15 +1,14 @@
-# Package-apigratis
-Uma maneira simples de consumir serviços de API do site https://apigratis.com.br
+# Description
+Uma maneira simples de consumir serviços de API do site: https://apigratis.com.br
 <br />
-⚠️Versão alpha, alguns ou mais recursos podem não funcionar perfeitamente, não utilize em ambiente de produção.
-
+⚠️Versão beta tester, alguns ou mais recursos podem não funcionar perfeitamente, não utilize em ambiente de produção.
 
 ## Install
 ```composer require jhowbhz/package-apigratis```
 
 ## Examples usage
 ```
-use ApiGratis;
+use ApiBrasil\ApiGratis;
 
 $data = [
   'server_host' => '',
@@ -26,7 +25,7 @@ ApiGratis::WhatsAppService('start', $data);
 ```
 
 ```
-use ApiGratis;
+use ApiBrasil\ApiGratis;
 
 $data = [
   'server_host' => '',
@@ -38,11 +37,10 @@ $data = [
 
 ApiGratis::WhatsAppService('sendText', $data);
 ```
-
-## Hosts free
+## Hosts Myzap v2 free
 ```https://apigratis.com.br/documentacoes```
 
-## Project Myzap
+## Project Myzap v2
 ```https://github.com/billbarsch/myzap```
 
 ```https://github.com/edupoli/MyZap2.0```

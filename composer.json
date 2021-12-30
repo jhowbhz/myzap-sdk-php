@@ -1,6 +1,6 @@
 {
     "name": "jhowbhz/package-apigratis",
-    "description": "Uma simples forma de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
+    "description": "Uma forma simples de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
     "keywords":    ["apigratis", "whatsapp", "messages", "api", "myzap", "messages free", "php requests"],
     "homepage":    "https://apigratis.com.br",
     "authors": [
@@ -17,10 +17,8 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4",
-        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
-        "guzzlehttp/guzzle": "^7.0",
         "php": ">=7.4"
     },
     "autoload": {
