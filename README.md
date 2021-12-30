@@ -10,6 +10,9 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 ## Important notice
 ⚠️Versão beta tester, alguns ou mais recursos podem não funcionar perfeitamente, não utilize em ambiente de produção.
 
+## Install
+```composer require jhowbhz/package-apigratis```
+
 ### Status
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
@@ -19,9 +22,6 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 | ⌚ | SinespService                  | This service is possible get multiples informations the vehicle and FIPE value, with simple plate of vehicle.       |   💰   | Loading                   | Loading                   |
 | ⌚ | FipeService                    | This service get FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
 | ⌚ | TranslateService               | This service translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
-
-## Instructions
-```composer require jhowbhz/package-apigratis```
 
 ## WhatsAppService - Examples usage
 ```php
