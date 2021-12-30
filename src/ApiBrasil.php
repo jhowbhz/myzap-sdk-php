@@ -8,15 +8,19 @@ class ApiGratis extends Base
 
         try {
             
+            //validate inputs obrigatory fields for good request
             $check = self::validateWhatsAppService($action, $data);
             return isset($check['error']) ?? $check['error'];
 
             $curl = curl_init();
-            
+
+            //validate inforequest
+            $method = $data['method'] ?? 'POST';
             $server_host = $data['server_host'] ?? '';
             $sessionkey = $data['sessionkey'] ?? '';
             $server_host = $server_host."/".$action;
 
+            //clear data after send body
             $clear = ['server_host', 'apitoken'];
             $body = array_diff_key($data, array_flip($clear));
 
@@ -28,7 +32,7 @@ class ApiGratis extends Base
                 CURLOPT_TIMEOUT => 0,
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_CUSTOMREQUEST => $method,
                 CURLOPT_POSTFIELDS => json_encode($body),
                 CURLOPT_HTTPHEADER => [ 
                     'sessionkey' => $sessionkey,
@@ -42,7 +46,7 @@ class ApiGratis extends Base
             return $callback;
 
         } catch (\Throwable $th) {
-            throw $th;
+            return ['error' => $th->getMessage()];
         }
 
     }
