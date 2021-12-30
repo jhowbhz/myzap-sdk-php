@@ -1,5 +1,5 @@
 # Description
-Uma maneira simples de consumir serviços de API do site: https://apigratis.com.br
+Uma forma simples de consumir serviços de API grátis do site: https://apigratis.com.br
 <br />
 ⚠️Versão beta tester, alguns ou mais recursos podem não funcionar perfeitamente, não utilize em ambiente de produção.
 
