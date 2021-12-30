@@ -13,8 +13,8 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | This a service is possible send messages text, files and start multiples sessions free in WhatsApp.        |   ✅   | Developing                | Developing                    |
-| ⌚ | CorreiosService                | This a service is possible search CEP and tracker packages white more informations in service correios Brazil.      |   💰   | Loading                   | Loading                   |
+| ✅ | WhatsAppService                | This service is possible send messages text, files and start multiples sessions free in WhatsApp.        |   ✅   | Developing                | Developing                    |
+| ⌚ | CorreiosService                | This service is possible get CEP or Tracker packages with multiples informations service correios Brazil.      |   💰   | Loading                   | Loading                   |
 | ⌚ | SinespService                  | This service is possible get multiples informations the vehicle and FIPE value, with simple plate of vehicle.       |   💰   | Loading                   | Loading                   |
 | ⌚ | FipeService                    | This service get FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
 | ⌚ | TranslateService               | This service translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
