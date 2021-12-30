@@ -1,4 +1,4 @@
-# Description
+## Description
 Uma forma simples de consumir serviços de API grátis do site: https://apigratis.com.br
 <br />
 ⚠️Versão beta tester, alguns ou mais recursos podem não funcionar perfeitamente, não utilize em ambiente de produção.
@@ -11,31 +11,33 @@ Uma forma simples de consumir serviços de API grátis do site: https://apigrati
 use ApiBrasil\ApiGratis;
 
 $data = [
-  'server_host' => '',
-  'apitoken' => '',
-  'session_name' => 'YOUR SESSION NAME',
-  'session_key' => 'YOUR SESSION KEY',
-  'wh_status' => 'https://webhook.site',
-  'wh_message' => 'https://webhook.site',
-  'wh_connect' => 'https://webhook.site',
-  'wh_qrcode' => 'https://webhook.site',
+  "server_host" => "", //required
+  "method" => "POST", //optional
+  "apitoken" => "", //required
+  "session_name" => "YOUR SESSION NAME", //required
+  "session_key" => "YOUR SESSION KEY", //required
+  "wh_status" => "", //optional
+  "wh_message" => "", //optional
+  "wh_connect" => "", //optional
+  "wh_qrcode" => "", //optional
 ];
 
-ApiGratis::WhatsAppService('start', $data);
+ApiGratis::WhatsAppService("start", $data);
 ```
 
 ```
 use ApiBrasil\ApiGratis;
 
 $data = [
-  'server_host' => '',
-  'session' => 'YOUR SESSION NAME',
-  'session_key' => 'YOUR SESSION KEY', 
-  'number' => '+55000000000', 
-  'TEXT SEND FRO APIBRASIL.COM.BR' 
+  "server_host" => "", //required
+  "method" => "POST", //optional
+  "session" => "YOUR SESSION NAME", //required
+  "session_key" => "YOUR SESSION KEY", //required
+  "number" => "+55000000000", //required
+  "TEXT SEND FRO APIBRASIL.COM.BR" //required
 ];
 
-ApiGratis::WhatsAppService('sendText', $data);
+ApiGratis::WhatsAppService("sendText", $data);
 ```
 ## Hosts Myzap v2 free
 https://apigratis.com.br/documentacoes
