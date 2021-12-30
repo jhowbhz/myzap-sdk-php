@@ -38,7 +38,7 @@ $data = [
 ApiGratis::WhatsAppService('sendText', $data);
 ```
 ## Hosts Myzap v2 free
-```https://apigratis.com.br/documentacoes```
+https://apigratis.com.br/documentacoes
 
 ## Project Myzap v2
 ```https://github.com/billbarsch/myzap```
