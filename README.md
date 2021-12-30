@@ -11,13 +11,13 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 
 ### Status
 
-| Up  | Services available                   | Free    | Status in dev             | Stable in production      |
-------|--------------------------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                       |   ✅   | Developing                | Developing                |
-| ⌚ | CorreiosService                       |   💰   | Loading                   | Loading                   |
-| ⌚ | SinespService                         |   💰   | Loading                   | Loading                   |
-| ⌚ | FipeService                           |   ✅   | Loading                   | Loading                   |
-| ⌚ | TranslateService                      |   💰   | Loading                   | Loading                   |
+| Up  | Services available            | Description       | Free    | Beta        | Stable   |
+------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
+| ✅ | WhatsAppService                | This a service is possible send messages text, files and start multiples sessions free in WhatsApp.        |   ✅   | Developing                | Developing                    |
+| ⌚ | CorreiosService                | This a service is possible search CEP and tracker packages white more informations in service correios Brazil.      |   💰   | Loading                   | Loading                   |
+| ⌚ | SinespService                  | This service is possible get multiples informations the vehicle and FIPE value, with simple plate of vehicle.       |   💰   | Loading                   | Loading                   |
+| ⌚ | FipeService                    | This service get FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
+| ⌚ | TranslateService               | This service translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
 
 ## Instructions
 ```composer require jhowbhz/package-apigratis```
