@@ -43,7 +43,7 @@ class ApiGratis extends Base
             $callback = curl_exec($curl);
             curl_close($curl);
 
-            return $callback;
+            return json_decode($callback);
 
         } catch (\Throwable $th) {
             return ['error' => $th->getMessage()];
