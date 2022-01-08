@@ -23,16 +23,16 @@
     },
     "autoload": {
         "psr-4": {
-            "ApiGratis\\": "src/"
+            "ApiGratis\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiGratis\\": "src/"
+            "ApiGratis\\": "src"
         }
     },
     "suggest": {
-        "ext-curl": "Required by ApiBrasil\\ to requests in services."
+        "ext-curl": "Required by ApiGratis\\ to requests in services."
     },
     "config": {
         "sort-packages": true,
