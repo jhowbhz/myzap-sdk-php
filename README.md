@@ -27,10 +27,12 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 | ⌚ | TranslateService               | This service translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
 
 ## WhatsAppService - Examples usage
+
+#### Start new session
 ```php
 use ApiGratis\ApiBrasil;
 
-$data = [
+$start = ApiBrasil::WhatsAppService("start", [
     "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
     "method" => "POST", //optional
     "apitoken" => "YOUR_API_TOKEN", //required
@@ -40,31 +42,47 @@ $data = [
     "wh_message" => "", //optional
     "wh_connect" => "", //optional
     "wh_qrcode" => "", //optional
-];
+]);
 
-ApiBrasil::WhatsAppService("start", $data);
+echo $start;
 ```
 
+#### Get new QRCODE
+```php 
+
+use ApiGratis\ApiBrasil;
+
+$qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+    "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
+    "method" => "GET", //required
+])
+
+header("content-type: image/png");
+echo $qrcode;
+
+```
+
+#### Send messages text
 ```php
 use ApiGratis\ApiBrasil;
 
-$data = [
+$sendText = ApiBrasil::WhatsAppService("sendText", [
   "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
   "method" => "POST", //optional
   "session" => "YOUR_SESSION_NAME", //required
   "session_key" => "YOUR_SESSION_KEY", //required
   "number" => "+55995360492", //required
   "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR" //required
-];
+]);
 
-ApiBrasil::WhatsAppService("sendText", $data);
+echo $sendText;
 ```
 
-## Partner project Myzap v2
+#### Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
 https://github.com/billbarsch/myzap
 
-## Don't a plan APIBrasil?
+#### Don't a plan APIBrasil?
 Visit https://apibrasil.com.br/
 
 <img style="background:white" src="https://apigratis.com.br/static/img/logo.png" />
