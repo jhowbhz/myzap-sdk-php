@@ -20,9 +20,9 @@ With this package it is possible to consume the free API's from the website http
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | This service is possible send messages text, files and start multiples sessions free in WhatsApp.        |   ✅   | OK                | Testing                    |
-| ⌚ | CorreiosService                | This service is possible get CEP or Tracker packages with multiples informations service correios Brazil.      |   💰   | Loading                   | Loading                   |
-| ⌚ | SinespService                  | This service is possible get multiples informations the vehicle and FIPE value, with simple plate of vehicle.       |   💰   | Loading                   | Loading                   |
+| ✅ | WhatsAppService                | This service is possible send messages text, files, free in WhatsApp.        |   ✅   | OK                | Testing                    |
+| ⌚ | CorreiosService                | This service is possible get CEP or Tracker packages, correios Brazil.      |   💰   | Loading                   | Loading                   |
+| ⌚ | SinespService                  | This service is possible get multiples informations the vehicle.       |   💰   | Loading                   | Loading                   |
 | ⌚ | FipeService                    | This service get FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
 | ⌚ | TranslateService               | This service translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
 
@@ -33,11 +33,10 @@ With this package it is possible to consume the free API's from the website http
 use ApiGratis\ApiBrasil;
 
 $start = ApiBrasil::WhatsAppService("start", [
-    "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
-    "method" => "POST", //optional
-    "apitoken" => "YOUR_API_TOKEN", //required
-    "session" => "YOUR_SESSION_NAME", //required
-    "sessionkey" => "YOUR_SESSION_KEY", //required
+    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "apitoken" => "YOUR_API_TOKEN",
+    "session" => "YOUR_SESSION_NAME",
+    "sessionkey" => "YOUR_SESSION_KEY",
     "wh_status" => "", //optional
     "wh_message" => "", //optional
     "wh_connect" => "", //optional
@@ -53,8 +52,8 @@ echo $start;
 use ApiGratis\ApiBrasil;
 
 $qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
-    "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
-    "method" => "GET", //required
+    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "method" => "GET",
 ])
 
 header("content-type: image/png");
@@ -67,12 +66,11 @@ echo $qrcode;
 use ApiGratis\ApiBrasil;
 
 $sendText = ApiBrasil::WhatsAppService("sendText", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
-  "method" => "POST", //optional
-  "session" => "YOUR_SESSION_NAME", //required
-  "session_key" => "YOUR_SESSION_KEY", //required
-  "number" => "+55995360492", //required
-  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR" //required
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "session_key" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
 ]);
 
 echo $sendText;
