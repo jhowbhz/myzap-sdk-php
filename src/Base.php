@@ -1,6 +1,6 @@
 <?php
 
-namespace ApiBrasil;
+namespace ApiGratis;
 class Base
 {
 

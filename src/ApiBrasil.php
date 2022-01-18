@@ -1,8 +1,8 @@
 <?php
 
-namespace ApiBrasil;
+namespace ApiGratis;
 
-class ApiGratis extends Base
+class ApiBrasil extends Base
 {
 
     public static function WhatsAppService(string $action = '', array $data = []) {

@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ApiBrasil\\ApiGratis\\": "src"
+            "ApiGratis\\ApiBrasil\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiBrasil\\ApiGratis\\": "src"
+            "ApiGratis\\ApiBrasil\\": "src"
         }
     },
     "suggest": {
