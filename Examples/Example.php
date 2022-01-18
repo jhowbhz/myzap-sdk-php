@@ -26,7 +26,15 @@ class Example
         ]);
     }
     
+    static function qrcode()
+    {
+        return ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+            "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
+            "method" => "GET", //required
+          ]);
+
+    }
 }
 
-$example = Example::start();
-var_dump($example);
+//$start = Example::start();
+//$qrcode = Example::qrcode();
