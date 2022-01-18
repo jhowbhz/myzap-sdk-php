@@ -11,7 +11,11 @@ class ApiBrasil extends Base
             
             //validate inputs obrigatory fields for good request
             $check = self::validateWhatsAppService($action, $data);
-            return isset($check['error']) ?? $check['error'];
+            if(isset($check['error'])){
+               foreach($check['error'] as $error){
+                    echo "<strong>Error: </strong>". $error . "<br/>";
+               }
+            }
 
             $curl = curl_init();
 
