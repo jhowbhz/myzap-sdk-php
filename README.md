@@ -20,7 +20,7 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | This service is possible send messages text, files and start multiples sessions free in WhatsApp.        |   ✅   | Developing                | Developing                    |
+| ✅ | WhatsAppService                | This service is possible send messages text, files and start multiples sessions free in WhatsApp.        |   ✅   | OK                | Testing                    |
 | ⌚ | CorreiosService                | This service is possible get CEP or Tracker packages with multiples informations service correios Brazil.      |   💰   | Loading                   | Loading                   |
 | ⌚ | SinespService                  | This service is possible get multiples informations the vehicle and FIPE value, with simple plate of vehicle.       |   💰   | Loading                   | Loading                   |
 | ⌚ | FipeService                    | This service get FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
@@ -28,25 +28,25 @@ Com esse pacote é possível consumir as API's gratuitas do site https://apibras
 
 ## WhatsAppService - Examples usage
 ```php
-use ApiBrasil\ApiGratis;
+use ApiGratis\ApiBrasil;
 
 $data = [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
-  "method" => "POST", //optional
-  "apitoken" => "YOUR_TOKEN_API", //required
-  "session_name" => "YOUR_SESSION_NAME", //required
-  "session_key" => "YOUR_SESSION_KEY", //required
-  "wh_status" => "", //optional
-  "wh_message" => "", //optional
-  "wh_connect" => "", //optional
-  "wh_qrcode" => "", //optional
+    "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
+    "method" => "POST", //optional
+    "apitoken" => "YOUR_API_TOKEN", //required
+    "session" => "YOUR_SESSION_NAME", //required
+    "sessionkey" => "YOUR_SESSION_KEY", //required
+    "wh_status" => "", //optional
+    "wh_message" => "", //optional
+    "wh_connect" => "", //optional
+    "wh_qrcode" => "", //optional
 ];
 
-ApiGratis::WhatsAppService("start", $data);
+ApiBrasil::WhatsAppService("start", $data);
 ```
 
 ```php
-use ApiBrasil\ApiGratis;
+use ApiGratis\ApiBrasil;
 
 $data = [
   "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
@@ -57,13 +57,12 @@ $data = [
   "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR" //required
 ];
 
-ApiGratis::WhatsAppService("sendText", $data);
+ApiBrasil::WhatsAppService("sendText", $data);
 ```
 
 ## Partner project Myzap v2
+https://github.com/edupoli/MyZap2.0<br/>
 https://github.com/billbarsch/myzap
-
-https://github.com/edupoli/MyZap2.0
 
 ## Don't a plan APIBrasil?
 Visit https://apibrasil.com.br/
