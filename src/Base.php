@@ -35,12 +35,12 @@ class Base
             }
             
             //validate sessionkey is not empty
-            if( !is_string($data['sessionkey']) or empty($data['sessionkey'])){
+            if( isset($data['sessionkey']) and !is_string($data['sessionkey']) or empty($data['sessionkey'])){
                 $error['error'][] = 'sessionkey must be a string or diff of null';
             }
 
             //validate session is not empty
-            if( !is_string($data['session']) or empty($data['session'])){
+            if( isset($data['session']) and !is_string($data['session']) or empty($data['session'])){
                 $error['error'][] = 'session must be a string or diff of null';
             }
 
