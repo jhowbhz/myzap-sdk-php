@@ -1,4 +1,5 @@
 <?php
+
 namespace ApiBrasil;
 class Base
 {

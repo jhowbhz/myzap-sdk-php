@@ -16,6 +16,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "composer/composer": "^2.2.0",
         "php": ">=7.4"
     },
     "require-dev": {
@@ -23,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ApiGratis\\": "src"
+            "ApiBrasil\\ApiGratis\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiGratis\\": "src"
+            "ApiBrasil\\ApiGratis\\": "src"
         }
     },
     "suggest": {
