@@ -1,0 +1,14 @@
+/vendor
+.vscode/
+.phpunit.result.cache
+xdebug.log
+.env
+.env.testing
+.env.backup
+build
+composer.lock
+vendor
+tests/temp
+.idea
+.phpunit.result.cache
+.php-cs-fixer.cache

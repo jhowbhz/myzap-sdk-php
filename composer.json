@@ -1,35 +1,43 @@
 {
     "name": "jhowbhz/package-apigratis",
     "description": "Uma forma simples de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
-    "keywords":    ["apigratis", "whatsapp", "messages", "api", "myzap", "messages free", "php requests"],
-    "homepage":    "https://apigratis.com.br",
+    "keywords": [
+        "apigratis",
+        "whatsapp",
+        "messages",
+        "api",
+        "myzap",
+        "messages free",
+        "php requests"
+    ],
+    "homepage": "https://apigratis.com.br",
     "authors": [
         {
-            "name":     "Jhon",
-            "email":    "contato@apigratis.com.br",
+            "name": "Jhon",
+            "email": "contato@apigratis.com.br",
             "homepage": "https://apigratis.com.br",
-            "role":     "Developer"
+            "role": "Developer"
         }
     ],
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "composer/composer": "^2.2.0",
         "php": ">=7.4"
     },
     "require-dev": {
-        "php": ">=7.4"
+        "php": ">=7.4",
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0"
     },
     "autoload": {
         "psr-4": {
-            "ApiBrasil\\": "src/"
+            "ApiGratis\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiBrasil\\": "src/"
+            "ApiGratis\\Test\\": "tests"
         }
     },
     "suggest": {
@@ -39,5 +47,10 @@
         "sort-packages": true,
         "optimize-autoloader": true,
         "preferred-install": "dist"
-    }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
