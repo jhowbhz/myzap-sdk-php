@@ -8,10 +8,10 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Description
-Com esse pacote é possível consumir as API's gratuitas do site https://apibrasil.com.br, de uma forma simples.
+With this package it is possible to consume the free API's from the website https://apibrasil.com.br, in a simple way.
 
 ## Important notice
-⚠️Versão beta tester, alguns ou mais recursos podem não funcionar perfeitamente, não utilize em ambiente de produção.
+⚠️Beta tester version, some or more features may not work perfectly, do not use in production environment.
 
 ## Install
 ```composer require jhowbhz/package-apigratis```
