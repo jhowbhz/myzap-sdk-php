@@ -1,6 +1,6 @@
 <?php
 
-namespace ApiBrasil\Test;
+namespace ApiGratis\Test;
 
 use ApiGratis\ApiBrasil;
 use PHPUnit\Framework\TestCase;
