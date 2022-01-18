@@ -1,6 +1,7 @@
 <?php
 
 namespace ApiGratis;
+
 class Base
 {
 
@@ -57,8 +58,8 @@ class Base
 
             return isset($error['error']) ? $error : true;
             
-        } catch (\Throwable $th) {
-            return $th->getMessage();
+        } catch (\Exception $e) {
+            return $e;
         }
     }
     
