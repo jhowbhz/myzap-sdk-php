@@ -1,30 +1,40 @@
-# Package APIGratis 
+# Package APIGratis 💼
+
+
+![APIGratis Banner](https://i.imgur.com/u6hYLsU.png)
+
 [![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 [![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
-<a href="https://github.com/jhowbhz/package-apigratis/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/package-apigratis"></a>
+<a href="https://github.com/jhowbhz/package-apigratis/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/package-apigratis"></a>
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jhowbhz/package-apigratis/total">
-<a href="https://github.com/jhowbhz/package-apigratis/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/package-apigratis"></a>
-<a href="https://github.com/jhowbhz/package-apigratis/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhowbhz/package-apigratis"></a>
+<a href="https://github.com/jhowbhz/package-apigratis/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/package-apigratis"></a>
+<a href="https://github.com/jhowbhz/package-apigratis/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhowbhz/package-apigratis"></a>
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Description
-With this package it is possible to consume the free API's from the website https://apibrasil.com.br, in a simple way.
+> With this package it is possible to consume the free API's from the website <a href="https://apibrasil.com.br" target="_blank"> APIGratis </a> , in a simple way.
 
 ## Important notice
-⚠️Beta tester version, some or more features may not work perfectly, do not use in production environment.
+> ⚠️<strong>Beta tester version</strong>, some or more features may not work perfectly, do not use in production environment.
 
-## Install
+## Our online channels
+
+[![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/KsxrUGIPWvUBYAjI1ogaGs)
+[![YouTube](https://img.shields.io/youtube/channel/subscribers/UC-_mG5VU7maEKt5rUj8tSbQ?label=YouTube)](https://www.youtube.com/channel/UC-_mG5VU7maEKt5rUj8tSbQ)
+
+
+## Install Package with composer
 ```composer require jhowbhz/package-apigratis```
 
-### Status
+## Status developing
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | This service is possible send messages text, files, free in WhatsApp.        |   ✅   | OK                | Testing                    |
-| ⌚ | CorreiosService                | This service is possible get CEP or Tracker packages, correios Brazil.      |   💰   | Loading                   | Loading                   |
-| ⌚ | SinespService                  | This service is possible get multiples informations the vehicle.       |   💰   | Loading                   | Loading                   |
-| ⌚ | FipeService                    | This service get FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
-| ⌚ | TranslateService               | This service translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
+| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | OK                | Testing                    |
+| ⌚ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   💰   | Loading                   | Loading                   |
+| ⌚ | SinespService                  | API Plate get infos vehicle.       |   💰   | Loading                   | Loading                   |
+| ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
+| ⌚ | TranslateService               | Translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
 
 ## WhatsAppService - Examples usage
 
@@ -57,6 +67,7 @@ $qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessio
 ])
 
 header("content-type: image/png");
+
 echo $qrcode;
 
 ```
@@ -76,11 +87,9 @@ $sendText = ApiBrasil::WhatsAppService("sendText", [
 echo $sendText;
 ```
 
-#### Partner project Myzap v2
+### Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
 https://github.com/billbarsch/myzap
 
-#### Don't a plan APIBrasil?
-Visit https://apibrasil.com.br/
-
-<img style="background:white" src="https://apigratis.com.br/static/img/logo.png" />
+### Service powered by
+<a href="https://apibrasil.com.br" target="_blank"> APIBrasil </a>
