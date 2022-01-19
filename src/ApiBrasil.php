@@ -12,11 +12,17 @@ class ApiBrasil extends Base
             //validate inputs obrigatory fields for good request
             $check = self::validateWhatsAppService($action, $data);
             if(isset($check['error'])){
+                
+                //loop error
                 foreach($check['error'] as $error){
                     echo "<strong>Error: </strong>". $error . "<br/>";
                 }
+
+                //stop application
+                exit();
             }
 
+            //init curl
             $curl = curl_init();
 
             //validate inforequest
@@ -34,6 +40,7 @@ class ApiBrasil extends Base
                 'sessionkey:'.$sessionkey
             );
 
+            //verify is a start, is true, add new apitoken in header
             if(isset($action) and $action === 'start'){
                 $header = array(
                     'Content-Type: application/json',
@@ -42,16 +49,15 @@ class ApiBrasil extends Base
                 );
             }
 
+            //request default
             curl_setopt_array($curl, array(
                 CURLOPT_URL => $server_host,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
                 CURLOPT_TIMEOUT => 0,
-                
                 CURLOPT_SSL_VERIFYHOST => false,
                 CURLOPT_SSL_VERIFYPEER => false,
-                
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => $method,
@@ -62,9 +68,12 @@ class ApiBrasil extends Base
             $callback = curl_exec($curl);
             curl_close($curl);
 
+            //return callback json
             return $callback;
 
         } catch (\Throwable $th) {
+
+            // return error
             return ['error' => $th->getMessage()];
         }
 

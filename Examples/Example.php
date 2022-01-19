@@ -11,6 +11,7 @@ use ApiGratis\ApiBrasil;
 class Example
 {
 
+    // start new instance    
     static function start()
     {
         return ApiBrasil::WhatsAppService("start", [
@@ -25,7 +26,8 @@ class Example
             "wh_qrcode" => "", //optional
         ]);
     }
-    
+
+    // get qrcode    
     static function qrcode()
     {
         return ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
@@ -34,6 +36,7 @@ class Example
           ]);
 
     }
+
 }
 
 //$start = Example::start();
