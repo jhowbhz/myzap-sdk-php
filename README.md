@@ -40,92 +40,103 @@
 
 <details>
 <summary> Start new session</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
 
-    use ApiGratis\ApiBrasil;
+$start = ApiBrasil::WhatsAppService("start", [
+    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "apitoken" => "YOUR_API_TOKEN",
+    "session" => "YOUR_SESSION_NAME",
+    "sessionkey" => "YOUR_SESSION_KEY",
+    "wh_status" => "", //optional
+    "wh_message" => "", //optional
+    "wh_connect" => "", //optional
+    "wh_qrcode" => "", //optional
+]);
 
-    $start = ApiBrasil::WhatsAppService("start", [
-        "server_host" => "https://whatsapp2.contrateumdev.com.br",
-        "apitoken" => "YOUR_API_TOKEN",
-        "session" => "YOUR_SESSION_NAME",
-        "sessionkey" => "YOUR_SESSION_KEY",
-        "wh_status" => "", //optional
-        "wh_message" => "", //optional
-        "wh_connect" => "", //optional
-        "wh_qrcode" => "", //optional
-    ]);
+echo $start;
+```
 
-    echo $start;
 </details>
 
 <details>
 <summary> Get new QRCODE</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
 
-    use ApiGratis\ApiBrasil;
+$qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "method" => "GET",
+])
 
-    $qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
-        "server_host" => "https://whatsapp2.contrateumdev.com.br",
-        "method" => "GET",
-    ])
+header("content-type: image/png");
 
-    header("content-type: image/png");
-
-    echo $qrcode;
+echo $qrcode;
+```
     
 </details>
 
 <details>
 <summary> Send text to number</summary>
-
-    use ApiGratis\ApiBrasil;
-
-    $sendText = ApiBrasil::WhatsAppService("sendText", [
-      "server_host" => "https://whatsapp2.contrateumdev.com.br",
-      "session" => "YOUR_SESSION_NAME",
-      "session_key" => "YOUR_SESSION_KEY",
-      "number" => "+55995360492",
-      "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
-    ]);
-
-    echo $sendText;
     
+```php
+use ApiGratis\ApiBrasil;
+
+$sendText = ApiBrasil::WhatsAppService("sendText", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "session_key" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
+]);
+
+echo $sendText;
+```
+
 </details>
 
 <details>
 <summary> Send images and files remote path ⭐new</summary>
 
-    use ApiGratis\ApiBrasil;
+```php
+use ApiGratis\ApiBrasil;
 
-    $sendfile = ApiBrasil::WhatsAppService("sendFile", [
-      "server_host" => "https://whatsapp2.contrateumdev.com.br",
-      "session" => "YOUR_SESSION_NAME",
-      "session_key" => "YOUR_SESSION_KEY",
-      "number" => "+55995360492",
-      "fileName" => "FILE_NAME"
-      "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
-      "caption" => "FILE_CAPTION"
-    ]);
+$sendfile = ApiBrasil::WhatsAppService("sendFile", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "session_key" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "fileName" => "FILE_NAME"
+  "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
+  "caption" => "FILE_CAPTION"
+]);
 
-    echo $sendfile;
-    
+echo $sendfile;
+```
+
 </details>
 
 <details>
 <summary> Send images and files base64 ⭐new</summary>
 
-    use ApiGratis\ApiBrasil;
+```php
+use ApiGratis\ApiBrasil;
 
-    $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
-      "server_host" => "https://whatsapp2.contrateumdev.com.br",
-      "session" => "YOUR_SESSION_NAME",
-      "session_key" => "YOUR_SESSION_KEY",
-      "number" => "+55995360492",
-      "fileName" => "FILE_NAME"
-      "path" => "data:application/pdf;base64,....."
-      "caption" => "FILE_CAPTION"
-    ]);
+$sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "session_key" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "fileName" => "FILE_NAME"
+  "path" => "data:application/pdf;base64,....."
+  "caption" => "FILE_CAPTION"
+]);
 
-    echo $sendfile64;
-    
+echo $sendfile64;
+```
+
 </details>
 
 ## Partner project Myzap v2
