@@ -74,7 +74,7 @@
 </details>
 
 <details>
-<summary> Get new QRCODE</summary>
+<summary> Send text to number</summary>
 
     use ApiGratis\ApiBrasil;
 
@@ -91,7 +91,7 @@
 </details>
 
 <details>
-<summary> Send images and files remote path</summary>
+<summary> Send images and files remote path ⭐new</summary>
 
     use ApiGratis\ApiBrasil;
 
@@ -110,7 +110,7 @@
 </details>
 
 <details>
-<summary> Send images and files base64</summary>
+<summary> Send images and files base64 ⭐new</summary>
 
     use ApiGratis\ApiBrasil;
 
