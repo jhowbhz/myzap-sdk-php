@@ -87,6 +87,40 @@ $sendText = ApiBrasil::WhatsAppService("sendText", [
 echo $sendText;
 ```
 
+#### Send images and files remote path
+```php
+use ApiGratis\ApiBrasil;
+
+$sendfile = ApiBrasil::WhatsAppService("sendFile", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "session_key" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "fileName" => "FILE_NAME"
+  "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
+  "caption" => "FILE_CAPTION"
+]);
+
+echo $sendfile;
+```
+
+#### Send images and files base64
+```php
+use ApiGratis\ApiBrasil;
+
+$sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "session_key" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "fileName" => "FILE_NAME"
+  "path" => "data:application/pdf;base64,....."
+  "caption" => "FILE_CAPTION"
+]);
+
+echo $sendfile64;
+```
+
 ### Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
 https://github.com/billbarsch/myzap
