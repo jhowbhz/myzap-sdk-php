@@ -87,7 +87,7 @@ use ApiGratis\ApiBrasil;
 $sendText = ApiBrasil::WhatsAppService("sendText", [
   "server_host" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
-  "session_key" => "YOUR_SESSION_KEY",
+  "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
   "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
 ]);
@@ -106,7 +106,7 @@ use ApiGratis\ApiBrasil;
 $sendfile = ApiBrasil::WhatsAppService("sendFile", [
   "server_host" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
-  "session_key" => "YOUR_SESSION_KEY",
+  "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
   "fileName" => "FILE_NAME"
   "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
@@ -127,7 +127,7 @@ use ApiGratis\ApiBrasil;
 $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
   "server_host" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
-  "session_key" => "YOUR_SESSION_KEY",
+  "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
   "fileName" => "FILE_NAME"
   "path" => "data:application/pdf;base64,....."
