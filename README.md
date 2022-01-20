@@ -23,7 +23,7 @@
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UC-_mG5VU7maEKt5rUj8tSbQ?label=YouTube)](https://www.youtube.com/channel/UC-_mG5VU7maEKt5rUj8tSbQ)
 
 
-## Install Package with composer
+## Install package with composer
 ```composer require jhowbhz/package-apigratis```
 
 ## Status developing
@@ -38,90 +38,97 @@
 
 ## WhatsAppService - Examples usage
 
-#### Start new session
-```php
-use ApiGratis\ApiBrasil;
+<details>
+<summary> Start new session</summary>
 
-$start = ApiBrasil::WhatsAppService("start", [
-    "server_host" => "https://whatsapp2.contrateumdev.com.br",
-    "apitoken" => "YOUR_API_TOKEN",
-    "session" => "YOUR_SESSION_NAME",
-    "sessionkey" => "YOUR_SESSION_KEY",
-    "wh_status" => "", //optional
-    "wh_message" => "", //optional
-    "wh_connect" => "", //optional
-    "wh_qrcode" => "", //optional
-]);
+    use ApiGratis\ApiBrasil;
 
-echo $start;
-```
+    $start = ApiBrasil::WhatsAppService("start", [
+        "server_host" => "https://whatsapp2.contrateumdev.com.br",
+        "apitoken" => "YOUR_API_TOKEN",
+        "session" => "YOUR_SESSION_NAME",
+        "sessionkey" => "YOUR_SESSION_KEY",
+        "wh_status" => "", //optional
+        "wh_message" => "", //optional
+        "wh_connect" => "", //optional
+        "wh_qrcode" => "", //optional
+    ]);
 
-#### Get new QRCODE
-```php 
+    echo $start;
+</details>
 
-use ApiGratis\ApiBrasil;
+<details>
+<summary> Get new QRCODE</summary>
 
-$qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
-    "server_host" => "https://whatsapp2.contrateumdev.com.br",
-    "method" => "GET",
-])
+    use ApiGratis\ApiBrasil;
 
-header("content-type: image/png");
+    $qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+        "server_host" => "https://whatsapp2.contrateumdev.com.br",
+        "method" => "GET",
+    ])
 
-echo $qrcode;
+    header("content-type: image/png");
 
-```
+    echo $qrcode;
+    
+</details>
 
-#### Send messages text
-```php
-use ApiGratis\ApiBrasil;
+<details>
+<summary> Get new QRCODE</summary>
 
-$sendText = ApiBrasil::WhatsAppService("sendText", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "session_key" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
-  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
-]);
+    use ApiGratis\ApiBrasil;
 
-echo $sendText;
-```
+    $sendText = ApiBrasil::WhatsAppService("sendText", [
+      "server_host" => "https://whatsapp2.contrateumdev.com.br",
+      "session" => "YOUR_SESSION_NAME",
+      "session_key" => "YOUR_SESSION_KEY",
+      "number" => "+55995360492",
+      "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
+    ]);
 
-#### Send images and files remote path
-```php
-use ApiGratis\ApiBrasil;
+    echo $sendText;
+    
+</details>
 
-$sendfile = ApiBrasil::WhatsAppService("sendFile", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "session_key" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
-  "fileName" => "FILE_NAME"
-  "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
-  "caption" => "FILE_CAPTION"
-]);
+<details>
+<summary> Send images and files remote path</summary>
 
-echo $sendfile;
-```
+    use ApiGratis\ApiBrasil;
 
-#### Send images and files base64
-```php
-use ApiGratis\ApiBrasil;
+    $sendfile = ApiBrasil::WhatsAppService("sendFile", [
+      "server_host" => "https://whatsapp2.contrateumdev.com.br",
+      "session" => "YOUR_SESSION_NAME",
+      "session_key" => "YOUR_SESSION_KEY",
+      "number" => "+55995360492",
+      "fileName" => "FILE_NAME"
+      "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
+      "caption" => "FILE_CAPTION"
+    ]);
 
-$sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "session_key" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
-  "fileName" => "FILE_NAME"
-  "path" => "data:application/pdf;base64,....."
-  "caption" => "FILE_CAPTION"
-]);
+    echo $sendfile;
+    
+</details>
 
-echo $sendfile64;
-```
+<details>
+<summary> Send images and files base64</summary>
 
-### Partner project Myzap v2
+    use ApiGratis\ApiBrasil;
+
+    $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
+      "server_host" => "https://whatsapp2.contrateumdev.com.br",
+      "session" => "YOUR_SESSION_NAME",
+      "session_key" => "YOUR_SESSION_KEY",
+      "number" => "+55995360492",
+      "fileName" => "FILE_NAME"
+      "path" => "data:application/pdf;base64,....."
+      "caption" => "FILE_CAPTION"
+    ]);
+
+    echo $sendfile64;
+    
+</details>
+
+## Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
 https://github.com/billbarsch/myzap
 
