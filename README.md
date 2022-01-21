@@ -43,7 +43,7 @@
 use ApiGratis\ApiBrasil;
 
 $start = ApiBrasil::WhatsAppService("start", [
-    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "serverhost" => "https://whatsapp2.contrateumdev.com.br",
     "apitoken" => "YOUR_API_TOKEN",
     "session" => "YOUR_SESSION_NAME",
     "sessionkey" => "YOUR_SESSION_KEY",
@@ -65,7 +65,7 @@ echo $start;
 use ApiGratis\ApiBrasil;
 
 $qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
-    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "serverhost" => "https://whatsapp2.contrateumdev.com.br",
     "method" => "GET",
 ])
 
@@ -83,7 +83,7 @@ echo $qrcode;
 use ApiGratis\ApiBrasil;
 
 $allchats = ApiBrasil::WhatsAppService("getAllCh", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
 ]);
@@ -100,7 +100,7 @@ echo $allchats;
 use ApiGratis\ApiBrasil;
 
 $sendText = ApiBrasil::WhatsAppService("sendText", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
@@ -119,7 +119,7 @@ echo $sendText;
 use ApiGratis\ApiBrasil;
 
 $sendfile = ApiBrasil::WhatsAppService("sendFile", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
@@ -140,7 +140,7 @@ echo $sendfile;
 use ApiGratis\ApiBrasil;
 
 $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
@@ -160,7 +160,7 @@ echo $sendfile64;
 use ApiGratis\ApiBrasil;
 
 $sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "+55995360492",
@@ -178,7 +178,7 @@ echo $sendaudio;
 use ApiGratis\ApiBrasil;
 
 $buttons = ApiBrasil::WhatsAppService("sendbutton", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "text" => "Teste de Envio de Mensagem com botoes",
@@ -208,7 +208,7 @@ echo $buttons;
 use ApiGratis\ApiBrasil;
 
 $groups = ApiBrasil::WhatsAppService("getAllGroups", [
-  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
 ]);
