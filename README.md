@@ -77,6 +77,23 @@ echo $qrcode;
 </details>
 
 <details>
+<summary> Get all chats</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
+
+$allchats = ApiBrasil::WhatsAppService("getAllCh", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+]);
+
+echo $allchats;
+```
+
+</details>
+
+<details>
 <summary> Send text to number</summary>
     
 ```php
