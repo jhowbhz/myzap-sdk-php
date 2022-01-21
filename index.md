@@ -1,37 +1,147 @@
-## Welcome to GitHub Pages
+# Package APIGratis 🚀
 
-You can use the [editor on GitHub](https://github.com/jhowbhz/package-apigratis/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![APIGratis Banner](https://i.imgur.com/u6hYLsU.png)
 
-### Markdown
+[![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
+[![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
+<a href="https://github.com/jhowbhz/package-apigratis/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/package-apigratis"></a>
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jhowbhz/package-apigratis/total">
+<a href="https://github.com/jhowbhz/package-apigratis/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/package-apigratis"></a>
+<a href="https://github.com/jhowbhz/package-apigratis/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhowbhz/package-apigratis"></a>
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg?style=flat-square)](https://php.net/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Description
+> With this package it is possible to consume the free API's from the website <a href="https://apibrasil.com.br" target="_blank"> APIGratis </a> , in a simple way.
 
-```markdown
-Syntax highlighted code block
+## Important notice
+> ⚠️<strong>Beta tester version</strong>, some or more features may not work perfectly, do not use in production environment.
 
-# Header 1
-## Header 2
-### Header 3
+## Our online channels
 
-- Bulleted
-- List
+[![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/KsxrUGIPWvUBYAjI1ogaGs)
+[![YouTube](https://img.shields.io/youtube/channel/subscribers/UC-_mG5VU7maEKt5rUj8tSbQ?label=YouTube)](https://www.youtube.com/channel/UC-_mG5VU7maEKt5rUj8tSbQ)
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Install package with composer
+```composer require jhowbhz/package-apigratis```
 
-[Link](url) and ![Image](src)
+## Status developing
+
+| Up  | Services available            | Description       | Free    | Beta        | Stable   |
+------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
+| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | OK                | OK                    |
+| ⌚ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   💰   | Loading                   | Loading                   |
+| ⌚ | SinespService                  | API Plate get infos vehicle.       |   💰   | Loading                   | Loading                   |
+| ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
+| ⌚ | TranslateService               | Translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
+
+## WhatsAppService - Examples usage
+
+<details>
+<summary> Start new session</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
+
+$start = ApiBrasil::WhatsAppService("start", [
+    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "apitoken" => "YOUR_API_TOKEN",
+    "session" => "YOUR_SESSION_NAME",
+    "sessionkey" => "YOUR_SESSION_KEY",
+    "wh_status" => "", //optional
+    "wh_message" => "", //optional
+    "wh_connect" => "", //optional
+    "wh_qrcode" => "", //optional
+]);
+
+echo $start;
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+</details>
 
-### Jekyll Themes
+<details>
+<summary> Get new QRCODE</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jhowbhz/package-apigratis/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+$qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+    "server_host" => "https://whatsapp2.contrateumdev.com.br",
+    "method" => "GET",
+])
 
-### Support or Contact
+header("content-type: image/png");
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+echo $qrcode;
+```
+    
+</details>
+
+<details>
+<summary> Send text to number</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
+
+$sendText = ApiBrasil::WhatsAppService("sendText", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
+]);
+
+echo $sendText;
+```
+
+</details>
+
+<details>
+<summary> Send images and files remote path ⭐new</summary>
+
+```php
+use ApiGratis\ApiBrasil;
+
+$sendfile = ApiBrasil::WhatsAppService("sendFile", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "fileName" => "FILE_NAME"
+  "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
+  "caption" => "FILE_CAPTION"
+]);
+
+echo $sendfile;
+```
+
+</details>
+
+<details>
+<summary> Send images and files base64 ⭐new</summary>
+
+```php
+use ApiGratis\ApiBrasil;
+
+$sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "fileName" => "FILE_NAME"
+  "path" => "data:application/pdf;base64,....."
+  "caption" => "FILE_CAPTION"
+]);
+
+echo $sendfile64;
+```
+
+</details>
+
+## Partner project Myzap v2
+https://github.com/edupoli/MyZap2.0<br/>
+https://github.com/billbarsch/myzap
+
+### Service powered by
+<a href="https://apibrasil.com.br" target="_blank"> APIBrasil </a>
