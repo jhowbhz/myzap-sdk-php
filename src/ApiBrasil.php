@@ -12,24 +12,22 @@ class ApiBrasil extends Base
             //validate inputs obrigatory fields for good request
             $check = self::validateWhatsAppService($action, $data);
             if(isset($check['error'])){
-                
                 //loop error
                 foreach($check['error'] as $error){
                     echo "<strong>Error: </strong>". $error . "<br/>";
                 }
-
-                //stop application
                 exit();
             }
-
+            
             //init curl
             $curl = curl_init();
 
             //validate inforequest
             $method = $data['method'] ?? 'POST';
-            $server_host = $data['server_host'] ?? '';
+            $serverhost = $data['serverhost'] ?? '';
             $sessionkey = $data['sessionkey'] ?? '';
             $apitoken = $data['apitoken'] ?? '';
+            $session = $data['session'] ?? '';
             $server_host = $server_host."/".$action;
 
             //clear data after send body
@@ -48,10 +46,15 @@ class ApiBrasil extends Base
                     'sessionkey:'.$sessionkey
                 );
             }
+            
+            //send parameters qrcode get
+            if(isset($action) and $action === 'qrcode'){
+                $serverhost = $serverhost."/".$action."?session=$session&sessionkey=$sessionkey"
+            }
 
             //request default
             curl_setopt_array($curl, array(
-                CURLOPT_URL => $server_host,
+                CURLOPT_URL => $serverhost,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
