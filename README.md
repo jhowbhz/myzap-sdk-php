@@ -14,9 +14,6 @@
 ## Description
 > With this package it is possible to consume the free API's from the website <a href="https://apibrasil.com.br" target="_blank"> APIGratis </a> , in a simple way.
 
-## Important notice
-> ⚠️<strong>Beta tester version</strong>, some or more features may not work perfectly, do not use in production environment.
-
 ## Our online channels
 
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-32AFED?logo=telegram)](https://t.me/apigratisoficial)
