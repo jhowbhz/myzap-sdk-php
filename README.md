@@ -12,7 +12,7 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Description
-> With this package it is possible to consume the free API's from the website <a href="https://apigratis.com.br" target="_blank"> APIGratis </a> , in a simple way.
+> With this package it is possible to consume the free API's from the website <a href="https://apigratis.com.br" target="_blank"> APIGratis </a>, in a simple way.
 
 ## Our online channels
 
@@ -133,6 +133,24 @@ $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
 ]);
 
 echo $sendfile64;
+```
+</details>
+
+<details>
+<summary> Send audio ⭐new</summary>
+
+```php
+use ApiGratis\ApiBrasil;
+
+$sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "path" => "https://tuningmania.com.br/autosom/mp3/Sine%20sweep%20%2020%20kHz%20~%2020%20Hz.mp3"
+]);
+
+echo $sendaudio;
 ```
 </details>
 
