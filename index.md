@@ -182,11 +182,11 @@ $buttons = ApiBrasil::WhatsAppService("sendbutton", [
   "buttons" => [
         [
             "buttonId":"btn_sim", //get value in webhook
-            "buttonText" => ["displayText":"SIM" ]
+            "body" => ["displayText":"SIM" ]
         ],
         [
             "buttonId":"btn_nao", //get value in webhook
-            "buttonText" => ["displayText":"NÃO" ]
+            "body" => ["displayText":"NÃO" ]
         ],
     ]
 ]);
