@@ -122,6 +122,19 @@ $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
 
 echo $sendfile64;
 ```
+Get all groups ⭐new
+
+```php
+use ApiGratis\ApiBrasil;
+
+$groups = ApiBrasil::WhatsAppService("getAllGroups", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+]);
+
+echo $groups;
+```
 
 ## Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
