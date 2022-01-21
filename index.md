@@ -19,6 +19,7 @@
 
 ## Our online channels
 
+[![Telegram Group](https://img.shields.io/badge/Telegram-Group-32AFED?logo=telegram)](https://t.me/apigratisoficial)
 [![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/KsxrUGIPWvUBYAjI1ogaGs)
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UC-_mG5VU7maEKt5rUj8tSbQ?label=YouTube)](https://www.youtube.com/channel/UC-_mG5VU7maEKt5rUj8tSbQ)
 
@@ -38,8 +39,7 @@
 
 ## WhatsAppService - Examples usage
 
-<details>
-<summary> Start new session</summary>
+### Start new session
     
 ```php
 use ApiGratis\ApiBrasil;
@@ -57,11 +57,7 @@ $start = ApiBrasil::WhatsAppService("start", [
 
 echo $start;
 ```
-
-</details>
-
-<details>
-<summary> Get new QRCODE</summary>
+### Get new QRCODE
     
 ```php
 use ApiGratis\ApiBrasil;
@@ -75,11 +71,8 @@ header("content-type: image/png");
 
 echo $qrcode;
 ```
-    
-</details>
 
-<details>
-<summary> Send text to number</summary>
+### Send text to number
     
 ```php
 use ApiGratis\ApiBrasil;
@@ -94,11 +87,7 @@ $sendText = ApiBrasil::WhatsAppService("sendText", [
 
 echo $sendText;
 ```
-
-</details>
-
-<details>
-<summary> Send images and files remote path ⭐new</summary>
+### Send images and files remote path ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
@@ -116,10 +105,7 @@ $sendfile = ApiBrasil::WhatsAppService("sendFile", [
 echo $sendfile;
 ```
 
-</details>
-
-<details>
-<summary> Send images and files base64 ⭐new</summary>
+#### Send images and files base64 ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
@@ -136,8 +122,6 @@ $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
 
 echo $sendfile64;
 ```
-
-</details>
 
 ## Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
