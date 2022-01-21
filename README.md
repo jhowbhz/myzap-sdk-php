@@ -137,6 +137,22 @@ $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
 
 echo $sendfile64;
 ```
+</details>
+
+<details>
+<summary> Get all groups ⭐new</summary>
+
+```php
+use ApiGratis\ApiBrasil;
+
+$groups = ApiBrasil::WhatsAppService("getAllGroups", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+]);
+
+echo $groups;
+```
 
 </details>
 
