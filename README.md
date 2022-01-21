@@ -144,5 +144,5 @@ echo $sendfile64;
 https://github.com/edupoli/MyZap2.0<br/>
 https://github.com/billbarsch/myzap
 
-### Service powered by
-<a href="https://apibrasil.com.br" target="_blank"> APIBrasil </a>
+### Service free powered by
+<a href="https://apigratis.com.br" target="_blank"> APIBrasil </a>
