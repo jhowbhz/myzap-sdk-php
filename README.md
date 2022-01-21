@@ -12,7 +12,7 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Description
-> With this package it is possible to consume the free API's from the website <a href="https://apibrasil.com.br" target="_blank"> APIGratis </a> , in a simple way.
+> With this package it is possible to consume the free API's from the website <a href="https://apigratis.com.br" target="_blank"> APIGratis </a> , in a simple way.
 
 ## Our online channels
 
