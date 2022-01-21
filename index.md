@@ -139,6 +139,33 @@ $sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
 echo $sendaudio;
 ```
 
+### Send buttons ⭐new
+
+```php
+use ApiGratis\ApiBrasil;
+
+$buttons = ApiBrasil::WhatsAppService("sendbutton", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "text" => "Teste de Envio de Mensagem com botoes",
+  "title" => "Botões",
+  "footer" => "Aqui vai o texto do rodapé da mensagem",
+  "buttons" => [
+        [
+            "buttonId":"btn_sim", //get value in webhook
+            "buttonText" => ["displayText":"SIM" ]
+        ],
+        [
+            "buttonId":"btn_nao", //get value in webhook
+            "buttonText" => ["displayText":"NÃO" ]
+        ],
+    ]
+]);
+
+echo $buttons;
+```
+
 ### Get all groups ⭐new
 
 ```php
