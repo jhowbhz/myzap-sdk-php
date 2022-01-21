@@ -93,6 +93,23 @@ echo $allchats;
 
 </details>
 
+
+<details>
+<summary> Get infos host device ⭐new </summary>
+
+```php
+use ApiGratis\ApiBrasil;
+
+$gethostdevice = ApiBrasil::WhatsAppService("getHostDevice", [
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+]);
+
+echo $gethostdevice;
+```
+</details>
+
 <details>
 <summary> Send text to number</summary>
     
@@ -187,11 +204,11 @@ $buttons = ApiBrasil::WhatsAppService("sendbutton", [
   "buttons" => [
         [
             "buttonId":"btn_sim", //get value in webhook
-            "buttonText" => ["displayText":"SIM" ]
+            "body" => ["displayText":"SIM" ]
         ],
         [
             "buttonId":"btn_nao", //get value in webhook
-            "buttonText" => ["displayText":"NÃO" ]
+            "body" => ["displayText":"NÃO" ]
         ],
     ]
 ]);
