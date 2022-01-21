@@ -25,9 +25,9 @@ class Base
                 $error['error'][] = 'action and data are not empty or null';
             }
             
-            //validate action is a string and server_host is not empty 
-            if($action == '' and $data['server_host'] == ''){
-                $error['error'][] = 'action and data or server_host are not empty or null';
+            //validate action is a string and serverhost is not empty 
+            if($action == '' and $data['serverhost'] == ''){
+                $error['error'][] = 'action and data or serverhost are not empty or null';
             }
 
             //validate action is a string and data is array
