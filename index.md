@@ -105,7 +105,7 @@ $sendfile = ApiBrasil::WhatsAppService("sendFile", [
 echo $sendfile;
 ```
 
-#### Send images and files base64 ⭐new
+### Send images and files base64 ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
@@ -122,7 +122,24 @@ $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
 
 echo $sendfile64;
 ```
-Get all groups ⭐new
+
+### Send audio ⭐new
+
+```php
+use ApiGratis\ApiBrasil;
+
+$sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
+  "server_host" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+  "path" => "https://tuningmania.com.br/autosom/mp3/Sine%20sweep%20%2020%20kHz%20~%2020%20Hz.mp3"
+]);
+
+echo $sendaudio;
+```
+
+### Get all groups ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
