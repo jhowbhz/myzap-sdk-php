@@ -77,7 +77,7 @@ echo $qrcode;
 </details>
 
 <details>
-<summary> Get all chats</summary>
+<summary> Get all chats ⭐new</summary>
     
 ```php
 use ApiGratis\ApiBrasil;
