@@ -28,10 +28,10 @@ class ApiBrasil extends Base
             $sessionkey = $data['sessionkey'] ?? '';
             $apitoken = $data['apitoken'] ?? '';
             $session = $data['session'] ?? '';
-            $server_host = $server_host."/".$action;
+            $serverhost = $serverhost."/".$action;
 
             //clear data after send body
-            $clear = ['server_host', 'apitoken', 'method'];
+            $clear = ['serverhost', 'apitoken', 'method'];
             $body = array_diff_key($data, array_flip($clear));
             $header = array(
                 'Content-Type: application/json',
@@ -49,7 +49,7 @@ class ApiBrasil extends Base
             
             //send parameters qrcode get
             if(isset($action) and $action === 'qrcode'){
-                $serverhost = $serverhost."/".$action."?session=$session&sessionkey=$sessionkey"
+                $serverhost = $serverhost."/".$action."?session=$session&sessionkey=$sessionkey";
             }
 
             //request default
