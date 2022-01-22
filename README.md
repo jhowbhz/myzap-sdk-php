@@ -82,13 +82,31 @@ echo $qrcode;
 ```php
 use ApiGratis\ApiBrasil;
 
-$allchats = ApiBrasil::WhatsAppService("getAllCh", [
+$allchats = ApiBrasil::WhatsAppService("getAllChat", [
   "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
 ]);
 
 echo $allchats;
+```
+
+</details>
+
+<details>
+<summary> Get all chats for number ⭐new</summary>
+    
+```php
+use ApiGratis\ApiBrasil;
+
+$getmessagesnumber = ApiBrasil::WhatsAppService("getMessagesChat", [
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+]);
+
+echo $getmessagesnumber;
 ```
 
 </details>
