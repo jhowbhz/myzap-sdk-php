@@ -15,7 +15,7 @@ class Example
     static function start()
     {
         return ApiBrasil::WhatsAppService("start", [
-            "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
+            "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
             "method" => "POST", //optional
             "apitoken" => "YOUR_API_TOKEN", //required
             "session" => "YOUR_SESSION_NAME", //required
@@ -31,7 +31,7 @@ class Example
     static function qrcode()
     {
         return ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
-            "server_host" => "https://whatsapp2.contrateumdev.com.br", //required
+            "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
             "method" => "GET", //required
           ]);
 
