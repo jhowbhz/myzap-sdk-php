@@ -64,7 +64,7 @@ echo $start;
 ```php
 use ApiGratis\ApiBrasil;
 
-$qrcode = ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+$qrcode = ApiBrasil::WhatsAppService("qrcode", [
     "serverhost" => "https://whatsapp2.contrateumdev.com.br",
     "method" => "GET",
 ])
@@ -82,7 +82,7 @@ echo $qrcode;
 ```php
 use ApiGratis\ApiBrasil;
 
-$allchats = ApiBrasil::WhatsAppService("getAllChat", [
+$allchats = ApiBrasil::WhatsAppService("getAllChats", [
   "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
