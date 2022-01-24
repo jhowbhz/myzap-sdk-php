@@ -72,7 +72,7 @@ header("content-type: image/png");
 echo $qrcode;
 ```
 
-### Get all chats ⭐new
+### 💰 Get all chats ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
@@ -86,7 +86,23 @@ $allchats = ApiBrasil::WhatsAppService("getAllChat", [
 echo $allchats;
 ```
 
-### Get infos host device ⭐new
+### 💰 Get all for number ⭐new
+
+
+```php
+use ApiGratis\ApiBrasil;
+
+$getmessagesnumber = ApiBrasil::WhatsAppService("getMessagesChat", [
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+  "session" => "YOUR_SESSION_NAME",
+  "sessionkey" => "YOUR_SESSION_KEY",
+  "number" => "+55995360492",
+]);
+
+echo $getmessagesnumber;
+```
+
+### 💰 Get infos host device ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
@@ -167,7 +183,7 @@ $sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
 echo $sendaudio;
 ```
 
-### Send buttons ⭐new
+### 💰 Send buttons ⭐new
 
 ```php
 use ApiGratis\ApiBrasil;
