@@ -77,7 +77,7 @@ echo $qrcode;
 </details>
 
 <details>
-<summary> Get all chats ⭐new</summary>
+<summary> 💰 Get all chats ⭐new</summary>
     
 ```php
 use ApiGratis\ApiBrasil;
@@ -94,7 +94,7 @@ echo $allchats;
 </details>
 
 <details>
-<summary> Get all chats for number ⭐new</summary>
+<summary> 💰 Get all chats for number ⭐new</summary>
     
 ```php
 use ApiGratis\ApiBrasil;
@@ -111,9 +111,8 @@ echo $getmessagesnumber;
 
 </details>
 
-
 <details>
-<summary> Get infos host device ⭐new </summary>
+<summary> 💰 Get infos host device ⭐new </summary>
 
 ```php
 use ApiGratis\ApiBrasil;
@@ -207,7 +206,7 @@ echo $sendaudio;
 </details>
 
 <details>
-<summary> Send buttons ⭐new</summary>
+<summary> 💰 Send buttons ⭐new</summary>
 
 ```php
 use ApiGratis\ApiBrasil;
