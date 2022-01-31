@@ -20,10 +20,6 @@
 [![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/KsxrUGIPWvUBYAjI1ogaGs)
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UC-_mG5VU7maEKt5rUj8tSbQ?label=YouTube)](https://www.youtube.com/channel/UC-_mG5VU7maEKt5rUj8tSbQ)
 
-
-## Install package with composer
-```composer require jhowbhz/package-apigratis```
-
 ## Status developing
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
@@ -33,6 +29,9 @@
 | ⌚ | SinespService                  | API Plate get infos vehicle.       |   💰   | Loading                   | Loading                   |
 | ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
 | ⌚ | TranslateService               | Translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
+
+## Install package with composer
+```composer require jhowbhz/package-apigratis```
 
 ## WhatsAppService - Examples usage
 
