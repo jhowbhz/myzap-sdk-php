@@ -1,7 +1,7 @@
 # Package APIGratis 🚀
 
 
-![APIGratis Banner](https://i.imgur.com/u6hYLsU.png)
+![APIGratis Banner](https://i.imgur.com/uGwboXm.png)
 
 [![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 [![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
@@ -249,8 +249,11 @@ $groups = ApiBrasil::WhatsAppService("getAllGroups", [
 
 echo $groups;
 ```
-
 </details>
+
+## Look and download this package in version JavaScript
+
+https://www.npmjs.com/package/apigratis
 
 ## Partner project Myzap v2
 https://github.com/edupoli/MyZap2.0<br/>
