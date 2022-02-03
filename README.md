@@ -139,11 +139,11 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendText = ApiBrasil::WhatsAppService("sendText", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "sessionkey" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
-  "text" => "IS MY FIRST TEXT SEND FROM APIBRASIL.COM.BR"
+    "serverhost" => "https://whatsapp-v2.apibrasil.com.br",
+    "session" => "teste",
+    "sessionkey" => "YOUR_SESSION_KEY",
+    "number" => "553195360492",
+    "text" => "IS MY FIRST TEXT SEND FROM https://apigratis.com.br"
 ]);
 
 echo $sendText;
