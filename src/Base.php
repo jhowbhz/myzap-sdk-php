@@ -48,8 +48,8 @@ class Base
             //validate number exist if number is integer
             if( isset($data['number']) ){
 
-                if( strlen($data['number']) < 12 ) {
-                    $error['error'][] = 'number must be a number and length is 12';
+                if( strlen($data['number']) < 11 ) {
+                    $error['error'][] = 'number must be a number and length is 11';
                 }
                 
             }
