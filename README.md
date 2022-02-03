@@ -14,8 +14,11 @@
 ## Description
 > With this package it is possible to consume the free API's from the website <a href="https://apigratis.com.br" target="_blank"> APIGratis </a>, in a simple way.
 
-## Our online channels
+## Get Free Token
+> Get your token in servers free <br />
+https://apigratis.com.br/documentacoes
 
+## Our online channels
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-32AFED?logo=telegram)](https://t.me/apigratisoficial)
 [![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/KsxrUGIPWvUBYAjI1ogaGs)
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UC-_mG5VU7maEKt5rUj8tSbQ?label=YouTube)](https://www.youtube.com/channel/UC-_mG5VU7maEKt5rUj8tSbQ)
@@ -262,7 +265,6 @@ echo $groups;
 </details>
 
 ## Look and download this package in version JavaScript
-
 https://www.npmjs.com/package/apigratis
 
 ## Partner project Myzap v2
