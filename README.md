@@ -39,6 +39,7 @@
 <summary> Start new session</summary>
     
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $start = ApiBrasil::WhatsAppService("start", [
@@ -61,6 +62,7 @@ echo $start;
 <summary> Get new QRCODE</summary>
     
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $qrcode = ApiBrasil::WhatsAppService("qrcode", [
@@ -79,6 +81,7 @@ echo $qrcode;
 <summary> 💰 Get all chats ⭐new</summary>
     
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $allchats = ApiBrasil::WhatsAppService("getAllChats", [
@@ -96,6 +99,7 @@ echo $allchats;
 <summary> 💰 Get all chats for number ⭐new</summary>
     
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $getmessagesnumber = ApiBrasil::WhatsAppService("getMessagesChat", [
@@ -114,6 +118,7 @@ echo $getmessagesnumber;
 <summary> 💰 Get infos host device ⭐new </summary>
 
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $gethostdevice = ApiBrasil::WhatsAppService("getHostDevice", [
@@ -130,6 +135,7 @@ echo $gethostdevice;
 <summary> Send text to number</summary>
     
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendText = ApiBrasil::WhatsAppService("sendText", [
@@ -149,6 +155,7 @@ echo $sendText;
 <summary> Send images and files remote path ⭐new</summary>
 
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendfile = ApiBrasil::WhatsAppService("sendFile", [
@@ -170,6 +177,7 @@ echo $sendfile;
 <summary> Send images and files base64 ⭐new</summary>
 
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
@@ -190,6 +198,7 @@ echo $sendfile64;
 <summary> Send audio ⭐new</summary>
 
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
@@ -208,6 +217,7 @@ echo $sendaudio;
 <summary> 💰 Send buttons ⭐new</summary>
 
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $buttons = ApiBrasil::WhatsAppService("sendbutton", [
@@ -238,6 +248,7 @@ echo $buttons;
 <summary> Get all groups ⭐new</summary>
 
 ```php
+require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $groups = ApiBrasil::WhatsAppService("getAllGroups", [
