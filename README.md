@@ -1,7 +1,8 @@
 # Package APIGratis 🚀
 
-
 ![APIGratis Banner](https://i.imgur.com/uGwboXm.png)
+
+[![Stargazers repo roster for @jhowbhz/package-apigratis](https://reporoster.com/stars/jhowbhz/package-apigratis)](https://github.com/jhowbhz/package-apigratis/stargazers)
 
 [![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 [![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
