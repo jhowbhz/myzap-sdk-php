@@ -28,6 +28,12 @@ class ApiBrasil extends Base
             $sessionkey = $data['sessionkey'] ?? '';
             $apitoken = $data['apitoken'] ?? '';
             $session = $data['session'] ?? '';
+            
+            $wh_status = $data['wh_status'] ?? '';
+            $wh_message = $data['wh_message'] ?? '';
+            $wh_connect = $data['wh_connect'] ?? '';
+            $wh_qrcode = $data['wh_qrcode'] ?? '';
+            
             $serverhost = $serverhost."/".$action;
 
             //clear data after send body
