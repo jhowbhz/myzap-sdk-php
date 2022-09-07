@@ -29,10 +29,10 @@ class ApiBrasil extends Base
             $apitoken = $data['apitoken'] ?? '';
             $session = $data['session'] ?? '';
             
-            $wh_status = $data['wh_status'] ?? '';
-            $wh_message = $data['wh_message'] ?? '';
-            $wh_connect = $data['wh_connect'] ?? '';
-            $wh_qrcode = $data['wh_qrcode'] ?? '';
+//             $wh_status = $data['wh_status'] ?? '';
+//             $wh_message = $data['wh_message'] ?? '';
+//             $wh_connect = $data['wh_connect'] ?? '';
+//             $wh_qrcode = $data['wh_qrcode'] ?? '';
             
             $serverhost = $serverhost."/".$action;
 
@@ -50,6 +50,14 @@ class ApiBrasil extends Base
                     'Content-Type: application/json',
                     'apitoken:'.$apitoken,
                     'sessionkey:'.$sessionkey
+                );
+                
+                $body = array(
+                    'session' => $session,
+                    'wh_status' => $data['wh_status'],
+                    'wh_message' => $data['wh_message'],
+                    'wh_connect' => $data['wh_connect'],
+                    'wh_qrcode' => $data['wh_qrcode']
                 );
             }
             
