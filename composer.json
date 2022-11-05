@@ -30,7 +30,7 @@
         "php": ">=8.0",
         "phpunit/phpunit": "^9.5",
         "guzzlehttp/guzzle": "^7.3",
-        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "orchestra/testbench": "^*",
     },
     "autoload": {
         "psr-4": {
