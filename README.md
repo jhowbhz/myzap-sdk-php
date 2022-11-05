@@ -144,6 +144,7 @@ echo $sendfile64;
 ```
 </details>
 
+<details>
 <summary> Get all groups ⭐new</summary>
 
 ```php
