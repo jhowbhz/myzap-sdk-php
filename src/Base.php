@@ -2,10 +2,27 @@
 
 namespace ApiGratis;
 
+use GuzzleHttp\Client;
+
 class Base
 {
 
-    public static function validateWhatsAppService($action, array $data, $error = [])
+    public static function defaultRequest(String $method, String $host, Array $header, Array $body)
+    {
+        try {
+            
+            $client = new Client([ 'verify' => false ]);
+            $client->request($method, $host, [
+                'headers' => $header,
+                'json' => json_encode($body)
+            ]);
+            
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    public static function validateWhatsAppService($action, Array $data, $error = [])
     {
         // validate inputs obrigatory fields for good request
         try {

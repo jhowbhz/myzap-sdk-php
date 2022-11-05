@@ -33,7 +33,7 @@ class Example
         return ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
             "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
             "method" => "GET", //required
-          ]);
+        ]);
 
     }
 

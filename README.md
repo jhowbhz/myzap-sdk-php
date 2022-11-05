@@ -47,7 +47,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $start = ApiBrasil::WhatsAppService("start", [
-    "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+    "serverhost" => "YOUR_SERVER",
     "apitoken" => "YOUR_API_TOKEN",
     "session" => "YOUR_SESSION_NAME",
     "sessionkey" => "YOUR_SESSION_KEY",
@@ -70,7 +70,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $qrcode = ApiBrasil::WhatsAppService("qrcode", [
-    "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+    "serverhost" => "YOUR_SERVER",
     "method" => "GET",
 ])
 
@@ -79,60 +79,6 @@ header("content-type: image/png");
 echo $qrcode;
 ```
     
-</details>
-
-<details>
-<summary> 💰 Get all chats ⭐new</summary>
-    
-```php
-require_once('vendor/autoload.php');
-use ApiGratis\ApiBrasil;
-
-$allchats = ApiBrasil::WhatsAppService("getAllChats", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "sessionkey" => "YOUR_SESSION_KEY",
-]);
-
-echo $allchats;
-```
-
-</details>
-
-<details>
-<summary> 💰 Get all chats for number ⭐new</summary>
-    
-```php
-require_once('vendor/autoload.php');
-use ApiGratis\ApiBrasil;
-
-$getmessagesnumber = ApiBrasil::WhatsAppService("getMessagesChat", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "sessionkey" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
-]);
-
-echo $getmessagesnumber;
-```
-
-</details>
-
-<details>
-<summary> 💰 Get infos host device ⭐new </summary>
-
-```php
-require_once('vendor/autoload.php');
-use ApiGratis\ApiBrasil;
-
-$gethostdevice = ApiBrasil::WhatsAppService("getHostDevice", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "sessionkey" => "YOUR_SESSION_KEY",
-]);
-
-echo $gethostdevice;
-```
 </details>
 
 <details>
@@ -146,7 +92,7 @@ $sendText = ApiBrasil::WhatsAppService("sendText", [
     "serverhost" => "https://whatsapp-v2.apibrasil.com.br",
     "session" => "teste",
     "sessionkey" => "YOUR_SESSION_KEY",
-    "number" => "553195360492",
+    "number" => "5531994359434",
     "text" => "IS MY FIRST TEXT SEND FROM https://apigratis.com.br"
 ]);
 
@@ -163,10 +109,10 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendfile = ApiBrasil::WhatsAppService("sendFile", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "YOUR_SERVER",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
+  "number" => "5531994359434",
   "fileName" => "FILE_NAME"
   "path" => "https://www.euax.com.br/wp-content/uploads/2019/10/Teste.png"
   "caption" => "FILE_CAPTION"
@@ -185,10 +131,10 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "YOUR_SERVER",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
+  "number" => "5531994359434",
   "fileName" => "FILE_NAME"
   "path" => "data:application/pdf;base64,....."
   "caption" => "FILE_CAPTION"
@@ -198,57 +144,6 @@ echo $sendfile64;
 ```
 </details>
 
-<details>
-<summary> Send audio ⭐new</summary>
-
-```php
-require_once('vendor/autoload.php');
-use ApiGratis\ApiBrasil;
-
-$sendaudio = ApiBrasil::WhatsAppService("sendAudio", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "sessionkey" => "YOUR_SESSION_KEY",
-  "number" => "+55995360492",
-  "path" => "https://tuningmania.com.br/autosom/mp3/Sine%20sweep%20%2020%20kHz%20~%2020%20Hz.mp3"
-]);
-
-echo $sendaudio;
-```
-</details>
-
-<details>
-<summary> 💰 Send buttons ⭐new</summary>
-
-```php
-require_once('vendor/autoload.php');
-use ApiGratis\ApiBrasil;
-
-$buttons = ApiBrasil::WhatsAppService("sendbutton", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
-  "session" => "YOUR_SESSION_NAME",
-  "sessionkey" => "YOUR_SESSION_KEY",
-  "text" => "Teste de Envio de Mensagem com botoes",
-  "title" => "Botões",
-  "footer" => "Aqui vai o texto do rodapé da mensagem",
-  "buttons" => [
-        [
-            "buttonId":"btn_sim", //get value in webhook
-            "body" => ["displayText":"SIM" ]
-        ],
-        [
-            "buttonId":"btn_nao", //get value in webhook
-            "body" => ["displayText":"NÃO" ]
-        ],
-    ]
-]);
-
-echo $buttons;
-```
-
-</details>
-
-<details>
 <summary> Get all groups ⭐new</summary>
 
 ```php
@@ -256,7 +151,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $groups = ApiBrasil::WhatsAppService("getAllGroups", [
-  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
+  "serverhost" => "YOUR_SERVER",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
 ]);
