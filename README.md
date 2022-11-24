@@ -1,4 +1,4 @@
-# Package APIGratis 🚀
+# SDK PHP - APIGratis <small> by APIBRASIL</small>  🚀
 
 ![APIGratis Banner](https://i.imgur.com/uGwboXm.png)
 
@@ -13,7 +13,7 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Description
-> This package it is possible to consume the free API's from the website <a href="https://apigratis.com.br" target="_blank"> APIGratis </a>, in a simple way.
+> This package SDK PHP it is possible to consume the free API's from the website <a href="https://apigratis.com.br" target="_blank"> APIGratis </a>, in a simple way.
 
 > Please, give me one star 
 
