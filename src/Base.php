@@ -3,22 +3,33 @@
 namespace ApiGratis;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\Request;
 
 class Base
 {
 
-    public static function defaultRequest(String $method, String $host, Array $header, Array $body)
+    public static function defaultRequest(String $method, String $base_uri, String $action, Array $headers, Array $body)
     {
         try {
             
-            $client = new Client([ 'verify' => false ]);
-            $client->request($method, $host, [
-                'headers' => $header,
-                'json' => json_encode($body)
+            // create new client
+            $client = new Client([ 
+                'timeout' => 300, // timeout 5 minutes
+                'verify' => false, // disable ssl verify
+                'base_uri' => $base_uri // base uri
             ]);
+
+            $headers['Content-Type'] = 'application/json'; // set content type json
+            $headers['Accept'] = 'application/json'; // set accept json
             
-        } catch (\Throwable $th) {
-            throw $th;
+            $request = new Request($method, $action, $headers, json_encode($body)); // create request
+            $response = $client->send($request); // send request
+            
+            return json_decode($response->getBody()->getContents(), true); // return response
+
+        } catch (\RequestException $e) {
+            throw $e; // throw exception
         }
     }
 
@@ -71,6 +82,7 @@ class Base
                 
             }
 
+            // validate apitoken is not empty
             return isset($error['error']) ? $error : true;
             
         } catch (\Exception $e) {
