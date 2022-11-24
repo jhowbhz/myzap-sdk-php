@@ -36,15 +36,14 @@ class ApiBrasil extends Base
             $clear = ['serverhost', 'apitoken', 'method'];
             $body = array_diff_key($data, array_flip($clear));
 
-            $header = [
+            $headers = [
                 'sessionkey' => $sessionkey
             ];
 
-            //verify is a start, is true, add new apitoken in header
+            //verify is a start, is true, add new apitoken in headers
             if(isset($action) and $action === 'start'){
 
-                    'sessionkey:'.$sessionkey
-                $header = [
+                $headers = [
                     'apitoken' => $apitoken,
                     'sessionkey' => $sessionkey
                 ];
@@ -64,8 +63,8 @@ class ApiBrasil extends Base
                 $action = $action."?session=$session&sessionkey=$sessionkey";
             }
 
-            //guzzle json request post with header
-            $response = self::defaultRequest($method, $base_uri, $action, $header, $body);
+            //guzzle json request post with headers
+            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
             
             //return response json
             return $response;
