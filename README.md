@@ -30,11 +30,10 @@ https://apigratis.com.br/documentacoes
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | OK                | OK                    |
+| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | ✅                | ✅                    |
 | ⌚ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   💰   | Loading                   | Loading                   |
 | ⌚ | SinespService                  | API Plate get infos vehicle.       |   💰   | Loading                   | Loading                   |
 | ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
-| ⌚ | TranslateService               | Translate texts in multiples languages.      |   💰   | Loading                   | Loading                   |
 
 ## Install package with composer
 ```composer require jhowbhz/package-apigratis```
