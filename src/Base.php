@@ -27,7 +27,7 @@ class Base
             $request = new Request($method, $action, $headers, json_encode($body)); // create request
             $response = $client->send($request); // send request
 
-            return json_decode($response->getBody()->getContents(), true); // return response
+            return json_decode($response->getBody()->getContents()); // return response object
 
         } catch (ClientException $e) {
 
