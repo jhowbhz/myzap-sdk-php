@@ -3,8 +3,9 @@
 namespace ApiGratis;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
 
 class Base
 {
@@ -12,9 +13,9 @@ class Base
     public static function defaultRequest(String $method, String $base_uri, String $action, Array $headers, Array $body)
     {
         try {
-            
+
             // create new client
-            $client = new Client([ 
+            $client = new Client([
                 'timeout' => 300, // timeout 5 minutes
                 'verify' => false, // disable ssl verify
                 'base_uri' => $base_uri // base uri
@@ -22,14 +23,18 @@ class Base
 
             $headers['Content-Type'] = 'application/json'; // set content type json
             $headers['Accept'] = 'application/json'; // set accept json
-            
+
             $request = new Request($method, $action, $headers, json_encode($body)); // create request
             $response = $client->send($request); // send request
-            
+
             return json_decode($response->getBody()->getContents(), true); // return response
 
-        } catch (\RequestException $e) {
-            throw $e; // throw exception
+        } catch (ClientException $e) {
+
+            // return exception error
+            $response = $e->getResponse();
+            return json_decode((string)($response->getBody()));
+
         }
     }
 
@@ -37,13 +42,13 @@ class Base
     {
         // validate inputs obrigatory fields for good request
         try {
-            
+
             //validate action and data is exist
             if(!isset($action) and !isset($data)){
                 $error['error'][] = 'action and data are empty';
             }
-            
-            //validate action or data is not empty 
+
+            //validate action or data is not empty
             if(empty($action) and empty($data)){
                 $error['error'][] = 'action and data are not empty';
             }
@@ -52,8 +57,8 @@ class Base
             if($action == '' and $data == '' or $action == null or $data == null){
                 $error['error'][] = 'action and data are not empty or null';
             }
-            
-            //validate action is a string and serverhost is not empty 
+
+            //validate action is a string and serverhost is not empty
             if($action == '' and $data['serverhost'] == ''){
                 $error['error'][] = 'action and data or serverhost are not empty or null';
             }
@@ -62,7 +67,7 @@ class Base
             if( !is_string($action) or !is_array($data)){
                 $error['error'][] = 'data bad request, format action is string and data is array[]';
             }
-            
+
             //validate sessionkey is not empty
             if( isset($data['sessionkey']) and !is_string($data['sessionkey']) or empty($data['sessionkey'])){
                 $error['error'][] = 'sessionkey must be a string or diff of null';
@@ -79,15 +84,15 @@ class Base
                 if( strlen($data['number']) < 10 ) {
                     $error['error'][] = 'number must be a number and length is 10';
                 }
-                
+
             }
 
             // validate apitoken is not empty
             return isset($error['error']) ? $error : true;
-            
+
         } catch (\Exception $e) {
             return $e;
         }
     }
-    
+
 }

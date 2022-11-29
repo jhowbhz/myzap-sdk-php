@@ -2,6 +2,8 @@
 
 namespace ApiGratis;
 
+use GuzzleHttp\Exception\ClientException;
+
 class ApiBrasil extends Base
 {
     // construct
@@ -13,10 +15,10 @@ class ApiBrasil extends Base
     public static function WhatsAppService(String $action = '', Array $data = []) {
 
         try {
-            
+
             //validate inputs obrigatory fields for good request
             $check = self::validateWhatsAppService($action, $data);
-            
+
             if(isset($check['error'])){
                 //loop error
                 foreach($check['error'] as $error){
@@ -24,14 +26,14 @@ class ApiBrasil extends Base
                 }
                 die;
             }
-            
+
             //validate inforequest
             $method = $data['method'] ?? 'POST';
             $base_uri = $data['serverhost'] ?? '';
             $sessionkey = $data['sessionkey'] ?? '';
             $apitoken = $data['apitoken'] ?? '';
             $session = $data['session'] ?? '';
-            
+
             //clear data after send body
             $clear = ['serverhost', 'apitoken', 'method'];
             $body = array_diff_key($data, array_flip($clear));
@@ -57,7 +59,7 @@ class ApiBrasil extends Base
                 ];
 
             }
-            
+
             //send parameters qrcode get
             if(isset($action) and $action === 'qrcode'){
                 $action = $action."?session=$session&sessionkey=$sessionkey";
@@ -65,12 +67,16 @@ class ApiBrasil extends Base
 
             //guzzle json request post with headers
             $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
-            
+
             //return response json
             return $response;
 
-        } catch (\Throwable $th) {
-            return ['error' => $th->getMessage()];
+        } catch (ClientException $e) {
+
+            // return exception error
+            $response = $e->getResponse();
+            return json_decode((string)($response->getBody()));
+
         }
 
     }
