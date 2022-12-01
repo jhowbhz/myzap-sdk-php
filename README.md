@@ -70,10 +70,14 @@ echo $start;
 require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
-$qrcode = ApiBrasil::WhatsAppService("qrcode", [
-    "serverhost" => "YOUR_SERVER",
+$qrcode = ApiBrasil::WhatsAppService("getQrCode", [
+    "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
+    "serverhost" => $server->host,
+    "sessionkey" => $session->session_key,
+    "session" => $session->session_name,
     "method" => "GET",
-])
+    "method" => "GET", //required
+]);
 
 header("content-type: image/png");
 
