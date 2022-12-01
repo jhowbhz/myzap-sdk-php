@@ -1,4 +1,4 @@
-<?php
+<?phphttps://github.com/jhowbhz/package-apigratis/tree/stable/Examples
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -30,8 +30,12 @@ class Example
     // get qrcode    
     static function qrcode()
     {
-        return ApiBrasil::WhatsAppService("getQrCode?session=YOUR_SESSION_NAME&sessionkey=YOUR_SESSION_KEY", [
+        return ApiBrasil::WhatsAppService("getQrCode", [
             "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
+            "serverhost" => $server->host,
+            "sessionkey" => $session->session_key,
+            "session" => $session->session_name,
+            "method" => "GET",
             "method" => "GET", //required
         ]);
 
