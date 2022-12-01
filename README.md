@@ -48,7 +48,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $start = ApiBrasil::WhatsAppService("start", [
-    "serverhost" => "YOUR_SERVER",
+    "serverhost" => "https://whatsapp2.contrateumdev.com.br",
     "apitoken" => "YOUR_API_TOKEN",
     "session" => "YOUR_SESSION_NAME",
     "sessionkey" => "YOUR_SESSION_KEY",
@@ -72,10 +72,8 @@ use ApiGratis\ApiBrasil;
 
 $qrcode = ApiBrasil::WhatsAppService("getQrCode", [
     "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
-    "serverhost" => $server->host,
-    "sessionkey" => $session->session_key,
-    "session" => $session->session_name,
-    "method" => "GET",
+    "sessionkey" => "SUA_SESSIONKEY", //required
+    "session" => "SUA_SESSION_NAME, //required
     "method" => "GET", //required
 ]);
 
@@ -94,7 +92,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendText = ApiBrasil::WhatsAppService("sendText", [
-    "serverhost" => "https://whatsapp-v2.apibrasil.com.br",
+    "serverhost" => "https://whatsapp2.contrateumdev.com.br",
     "session" => "teste",
     "sessionkey" => "YOUR_SESSION_KEY",
     "number" => "5531994359434",
@@ -114,7 +112,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendfile = ApiBrasil::WhatsAppService("sendFile", [
-  "serverhost" => "YOUR_SERVER",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "5531994359434",
@@ -136,7 +134,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $sendfile64 = ApiBrasil::WhatsAppService("sendFile64", [
-  "serverhost" => "YOUR_SERVER",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
   "number" => "5531994359434",
@@ -157,7 +155,7 @@ require_once('vendor/autoload.php');
 use ApiGratis\ApiBrasil;
 
 $groups = ApiBrasil::WhatsAppService("getAllGroups", [
-  "serverhost" => "YOUR_SERVER",
+  "serverhost" => "https://whatsapp2.contrateumdev.com.br",
   "session" => "YOUR_SESSION_NAME",
   "sessionkey" => "YOUR_SESSION_KEY",
 ]);
