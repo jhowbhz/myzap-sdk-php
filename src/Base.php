@@ -27,6 +27,10 @@ class Base
             $request = new Request($method, $action, $headers, json_encode($body)); // create request
             $response = $client->send($request); // send request
 
+            if(isset(explode("?", $action)[0]) and explode("?", $action)[0] === 'getQrCode'){
+                return $response->getBody()->getContents();
+            }
+            
             return json_decode($response->getBody()->getContents()); // return response object
 
         } catch (ClientException $e) {
