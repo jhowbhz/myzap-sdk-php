@@ -1,15 +1,7 @@
-# Esse pacote só poderá ser usado com o MYZAP
-
-Caso queira utilizar o apibrasil.com.br
-- Atualize
-
-https://github.com/APIBrasil/apigratis-sdk-php
-# Package APIGratis 🚀
-
 ![APIGratis Banner](https://i.imgur.com/u6hYLsU.png)
 
-[![latest stable version](https://poser.pugx.org/jhowbhz/myzap-sdk-php/v/stable.svg)](https://packagist.org/packages/jhowbhz/myzap-sdk-php)
-[![license mit](https://poser.pugx.org/jhowbhz/myzap-sdk-php/license.svg)](https://packagist.org/packages/jhowbhz/myzap-sdk-php)
+[![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
+[![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 <a href="https://github.com/jhowbhz/myzap-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/myzap-sdk-php"></a>
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jhowbhz/myzap-sdk-php/total">
 <a href="https://github.com/jhowbhz/myzap-sdk-php/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/myzap-sdk-php"></a>
@@ -17,7 +9,7 @@ https://github.com/APIBrasil/apigratis-sdk-php
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Description
-> With this package it is possible to consume the free API's from the website <a href="https://apibrasil.com.br" target="_blank"> APIGratis </a> , in a simple way.
+> This package use is myzap versions free or paid
 
 ## Important notice
 > ⚠️<strong>Beta tester version</strong>, some or more features may not work perfectly, do not use in production environment.
@@ -30,7 +22,7 @@ https://github.com/APIBrasil/apigratis-sdk-php
 
 
 ## Install package with composer
-```composer require jhowbhz/myzap-sdk-php```
+```composer require jhowbhz/package-apigratis```
 
 ## Status developing
 
