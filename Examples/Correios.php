@@ -1,2 +1,0 @@
-<?php 
-//comming soon
