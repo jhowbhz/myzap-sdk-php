@@ -1,4 +1,6 @@
-# Esse pacote será aposentado
+# Esse pacote só poderá ser usado com o MYZAP
 
-Atualize em breve:
+Caso queira utilizar o apibrasil.com.br
+- Atualize
+
 https://github.com/APIBrasil/apigratis-sdk-php
