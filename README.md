@@ -1,3 +1,6 @@
+![capa-og](https://github.com/user-attachments/assets/8f35cdd2-a795-4aca-888f-d72d2ddde0c3)
+
+
 [![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 [![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 <a href="https://github.com/jhowbhz/myzap-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/myzap-sdk-php"></a>
