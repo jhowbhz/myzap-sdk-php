@@ -1,5 +1,3 @@
-![APIGratis Banner](https://i.imgur.com/u6hYLsU.png)
-
 [![latest stable version](https://poser.pugx.org/jhowbhz/package-apigratis/v/stable.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 [![license mit](https://poser.pugx.org/jhowbhz/package-apigratis/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
 <a href="https://github.com/jhowbhz/myzap-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/myzap-sdk-php"></a>
